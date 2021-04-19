@@ -1,0 +1,76 @@
+div.gallery {
+	margin: 5px;
+	border: 1px solid #ccc;
+	float: left;
+	width: 180px;
+}
+
+div.gallery:hover {
+	border: 1px solid #777;
+}
+
+div.gallery img {
+	width: 100%;
+	height: 250px;
+}
+
+div.desc {
+	padding: 20px;
+	text-align: center;
+}
+
+body {
+	margin: 0px;
+}
+
+
+ .top-div .footer-ele ul li {
+            list-style-type: none;
+        }
+
+        .first-element {
+            font-size: 15px;
+        }
+
+        .footer-ele {
+            display: flex;
+            justify-content: space-around;
+            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+
+        .top-div {
+            border: 1px solid;
+        }
+
+        .middle{
+        	list-style-type: none;
+        }
+
+        .middle-div {
+            top: 0%;
+            border: 1px solid;
+        }
+
+        .middle-ele {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        #bottom-div {
+            display: flex;
+            justify-content: space-around;
+            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+
+        #fa {
+            padding: 20px;
+            font-size: 30px;
+            width: 30px;
+            text-align: center;
+            text-decoration: none;
+            margin: 10px 12px;
+            border-radius: 50%;
+            border: 1px;
+        }
+}
+

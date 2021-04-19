@@ -1,0 +1,393 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book My Seats</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link href="delete1.css" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <meta name="google-signin-client_id" content="386918221572-ntvfo1s66g49ghamntgsc75ilp5aifi0.apps.googleusercontent.com">
+  <script src="https://apis.google.com/js/platform.js" async defer></script>
+  <script src="google.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <link rel="stylesheet" href="https://formden.com/static/cdn/bootstrap-iso.css" />
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css" />
+    <script src="js/dropdownCheckboxes/dropdownCheckboxes.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    
+    <script>
+        $(document).ready(function () {
+            var date_input = $('input[name="date"]');
+            var today = new Date();
+            var container = $('.bootstrap-iso form').length > 0 ? $('.bootstrap-iso form').parent() : "body";
+            date_input.datepicker({
+                format: 'mm/dd/yyyy',
+                container: container,
+                todayHighlight: true,
+                autoclose: true,
+                startDate: '-0d',
+            })
+        })
+        $(function () {
+            $('.cq-dropdown').dropdownCheckboxes();
+        });
+    </script>
+    <style>
+        body {
+            margin: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+            font-size: 1.80rem;
+            font-weight: 400;
+            line-height: 1.5;
+            color: #495057;
+            text-align: left;
+        }
+
+        .mt-100 {
+            margin-top: 0;
+        }
+
+        .card {
+            box-shadow: 0 0.46875rem 2.1875rem rgba(4, 9, 20, 0.03), 0 0.9375rem 1.40625rem rgba(4, 9, 20, 0.03), 0 0.25rem 0.53125rem rgba(4, 9, 20, 0.05), 0 0.125rem 0.1875rem rgba(4, 9, 20, 0.03);
+            border-width: 0;
+            transition: all .2s
+        }
+
+        .card-header:first-child {
+            border-radius: calc(.25rem - 1px) calc(.25rem - 1px) 0 0
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            border-bottom-width: 1px;
+            padding-top: 0;
+            padding-bottom: 0;
+            padding-right: .625rem;
+            height: 3.5rem;
+            background-color: #fff;
+            border-bottom: 1px solid rgba(26, 54, 126, 0.125)
+        }
+
+        .btn-primary.btn-shadow {
+            box-shadow: 0 0.125rem 0.625rem rgba(63, 106, 216, 0.4), 0 0.0625rem 0.125rem rgba(63, 106, 216, 0.5)
+        }
+
+        .btn.btn-wide {
+            padding: .375rem 1.5rem;
+            font-size: .8rem;
+            line-height: 1.5;
+            border-radius: .25rem
+        }
+
+        .btn-primary {
+            color: #fff;
+            background-color: #3f6ad8;
+            border-color: #3f6ad8
+        }
+
+        .form-control {
+            display: block;
+            width: 100%;
+            height: calc(2.25rem + 2px);
+            padding: .375rem .75rem;
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.5;
+            color: #495057;
+            background-color: #fff;
+            background-clip: padding-box;
+            border: 1px solid #ced4da;
+            border-radius: .25rem;
+            transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out
+        }
+
+        .card-body {
+            flex: 1 1 auto;
+            padding: 1.25rem
+        }
+
+        .flex-truncate {
+            min-width: 0 !important
+        }
+
+        .d-block {
+            display: block !important
+        }
+
+        a {
+            color: #2603c5;
+            text-decoration: none !important;
+            background-color: transparent
+        }
+
+        .media img {
+            width: 40px;
+            height: auto
+        }
+
+        .items {
+            display: flex;
+            justify-content: flex-start;
+        }
+
+        .timings {
+            display: flex;
+            margin-top: -10px;
+            margin-left: 50px;
+        }
+
+        .timings a p {
+            display: flex;
+            border: 1px solid;
+            padding: 10px;
+            margin-left: 50px;
+        }
+
+        .timings p a {
+            display: flex;
+            border: 1px solid;
+            padding: 10px;
+            margin-left: 50px;
+        }
+
+        .form-inline {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 0;
+            padding: 20px;
+        }
+
+        .bootstrap-iso {
+            background-color: rgb(139, 138, 134);
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="navbar" id="app">
+            <img v-bind:src="Image" height="60" width="60">
+            <h1>{{ Title }}</h1>
+            <form action="/action_page.php">
+             <input type="text" placeholder="Search movies.." name="search">
+            </form>
+
+        <button type="button" id="google" class="google-profile" value="signin">Signin</button>
+            <button type="button" data-toggle="modal" data-target="#mymodal" class="google-signin" value="SignIn">Sign in</button>
+            <select name="select" readonly>
+              <option id="selected" value="Location">{{ Location }} </option>
+            </select>
+        </div>
+    </nav>
+
+<div class="modal fade" id="mymodal" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Sign in</h4>
+      </div>
+
+      <div class="modal-body">
+        <div class="g-signin2" data-onsuccess="onsignin"></div>
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <div class="bootstrap-iso">
+
+        <form class="form-inline" action="post" autocomplete="off">
+            <div class="form-group" id='datepicker'>
+                <label class="control-label" for="date">Date</label>
+                <input class="form-control" id="date" name="date" placeholder="MM/DD/YYY" type="text" />
+            </div>
+            <div class="form-group" id="timefilter">
+                <div class="dropdown cq-dropdown" data-name='statuses'>
+                    <button class="btn btn-info btn-sm dropdown-toggle" type="button" id="btndropdown"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        Filter by Show Time
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="btndropdown">
+                        <li>
+                            <label class="radio-btn">
+
+                                <input type="checkbox" value='jQuery'>
+                                 11:00AM
+                            </label>
+                        </li>
+                        <li>
+                            <label class="radio-btn">
+                                <input type="checkbox" value='Bootstrap'>
+                                2:30PM
+                            </label>
+                        </li>
+                        <li>
+                            <label class="radio-btn">
+                                <input type="checkbox" value='HTML'>
+                                6:00PM
+                            </label>
+                        </li>
+                        <li>
+                            <label class="radio-btn">
+                                <input type="checkbox" value='JavaScript'>
+                                9:30PM
+                            </label>
+                        </li>
+                        <!-- <li class='text-center'>
+                                        <button type='button' class='btn btn-xs btn-danger clear close-dropdown'
+                                            value='Clear' id='reset'>Clear</button>
+                                        <button type='button' class='btn btn-xs btn-success save'
+                                            value='Save'>Save</button>
+                                    </li> -->
+                    </ul>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <div class="container-fluid mt-100">
+        <div class="card mb-3">
+            <div class="card-body py-3">
+                <div class="row no-gutters align-items-center items">
+                    <div class="col"> <a href="javascript:void(0)" class="text-big" data-abc="true">AMB Cinemas</a>
+                        <div class="text-muted small mt-1">Rating 4.6 &nbsp;·&nbsp; <a href="javascript:void(0)"
+                                class="text-muted" data-abc="true">Gachibowli</a></div>
+                    </div>
+                    <div class="d-none d-md-block col-4 timings">
+
+                        <p><a href="seatSelection.php">11:00AM</a></p>
+                        <p><a href="#">02:30PM</a></p>
+                        <p><a href="#">06:30PM</a></p>
+                        <p><a href="#">09:30PM</a></p>
+                    </div>
+                </div>
+            </div>
+            <hr class="m-0">
+            <div class="card-body py-3">
+                <div class="row no-gutters align-items-center items">
+                    <div class="col"> <a href="javascript:void(0)" class="text-big" data-abc="true">AMB Cinemas</a>
+                        <div class="text-muted small mt-1">Rating 4.6 &nbsp;·&nbsp; <a href="javascript:void(0)"
+                                class="text-muted" data-abc="true">Gachibowli</a></div>
+                    </div>
+                    <div class="d-none d-md-block col-4 timings">
+                        <p><a href="#">11:00AM</a></p>
+                        <p><a href="#">02:30PM</a></p>
+                        <p><a href="#">06:30PM</a></p>
+                        <p><a href="#">09:30PM</a></p>
+                    </div>
+                </div>
+            </div>
+            <hr class="m-0">
+            <div class="card-body py-3">
+                <div class="row no-gutters align-items-center items">
+                    <div class="col"> <a href="javascript:void(0)" class="text-big" data-abc="true">AMB Cinemas</a>
+                        <div class="text-muted small mt-1">Rating 4.6 &nbsp;·&nbsp; <a href="javascript:void(0)"
+                                class="text-muted" data-abc="true">Gachibowli</a></div>
+                    </div>
+                    <div class="d-none d-md-block col-4 timings">
+                        <p><a href="#">11:00AM</a></p>
+                        <p><a href="#">02:30PM</a></p>
+                        <p><a href="#">06:30PM</a></p>
+                        <p><a href="#">09:30PM</a></p>
+                    </div>
+                </div>
+            </div>
+            <hr class="m-0">
+            <div class="card-body py-3">
+                <div class="row no-gutters align-items-center items">
+                    <div class="col"> <a href="javascript:void(0)" class="text-big" data-abc="true">AMB Cinemas</a>
+                        <div class="text-muted small mt-1">Rating 4.6 &nbsp;·&nbsp; <a href="javascript:void(0)"
+                                class="text-muted" data-abc="true">Gachibowli</a></div>
+                    </div>
+                    <div class="d-none d-md-block col-4 timings">
+                        <p><a href="#">11:00AM</a></p>
+                        <p><a href="#">02:30PM</a></p>
+                        <p><a href="#">06:30PM</a></p>
+                        <p><a href="#">09:30PM</a></p>
+                    </div>
+                </div>
+            </div>
+            <hr class="m-0">
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="main.js"></script>
+ 
+</body>
+
+<footer>
+
+    <div class='top-div'>
+        <div class="footer-ele">
+            <ul>
+                <li class="first-element"><b>Movies By Genre</b></li>
+                <li><a href="GenreAction/GenreAction.html">Action</a></li>
+                <li><a href="GenreRomance/GenreRomance.html">Romance</a></li>
+                <li><a href="#">Comedy</a></li>
+                <li><a href="#">Drama</a></li>
+                <li><a href="#">Sci-fi</a></li>
+                <li><a href="#">Crime</a></li>
+                <li><a href="#">Mystery</a></li>
+                <li><a href="#">Thriller</a></li>
+            </ul>
+            <ul>
+                <li class="first-element"><b>Movies By language</b></li>
+                <li><a href="English.html">English</a></li>
+                <li><a href="French.html">French</a></li>
+                <li><a href="#">Hindi</a></li>
+                <li><a href="#">Tamil</a></li>
+                <li><a href="#">Telugu</a></li>
+            </ul>
+            <ul>
+                <li class="first-element"><b>Popular Movies by Language</b></li>
+                <li><a href="#">Popular Hindi Movies</a></li>
+                <li><a href="#">Popular English Movies</a></li>
+                <li><a href="#">Popular Telugu Movies</a></li>
+                <li><a href="#">Popular Tamil Movies</a></li>
+            </ul>
+            <ul>
+                <li class="first-element"><b>Movies review</b></li>
+                <li><a href="#">Trending Articles</a></li>
+                <li><a href="#">IMDB ratings</a></li>
+                <li><a href="home.html">Search movies and cast</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="middle-div">
+        <ul class='middle-ele'>
+            <li class="middle"><a href="aboutproject.html">About Us</a></li>
+            <li class="middle"><a href="About_us/about.html">Contact Us</a></li>
+            <li class="middle"><a href="help.html">Help</a></li>
+        </ul>
+        <div id="bottom-div">
+            <ul class="footer-ul">
+                <a href="#"><li id="fa" class="fa fa-facebook"></li></a>
+                <a href="#"><li id="fa" class="fa fa-instagram"></li></a>
+                <a href="#"><li id="fa" class="fa fa-twitter"></li></a>
+            </ul>
+        </div>
+    </div>
+
+</footer>
+
+</html>

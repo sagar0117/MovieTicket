@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Book My Seats</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link href="delete.css" rel="stylesheet" type="text/css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+</head>
+<body>
+	<nav>
+		<div class="navbar" id="app">
+			<img v-bind:src="Image" height="60" width="60">
+			<h1>{{ Title }}</h1>
+			<form action="/action_page.php">
+     		 <input type="text" placeholder="Search movies.." name="search">
+  			</form>
+  			<button>Sign in</button>
+  			<select name="select" readonly>
+			  <option id="selected" value="Location">{{ Location }}	</option>
+			</select>
+		</div>
+	</nav>
+
+<!-- Dark mode --> 
+<button onclick="darkMode()" class="dark-mode-button"><img src="dark-mode.png"></button>
+
+<!-- modal -->
+	<!-- <span id="select"></span>  -->
+
+	<div id="myModal" class="modal fade" role="dialog">
+  	<div class="modal-dialog">
+
+    <!-- Modal content-->
+ 	  <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Choose city</h4>
+      </div>
+      <div class="modal-body">
+        <div class="btn option">
+          <img src="cityIcons/montreal.png" height="60" width="60">
+          <p>Montreal</p>
+        </div>
+
+        <div class="btn option">
+          <img src="cityIcons/toronto.png" height="60" width="60">
+          <p>Toronto</p>
+        </div>
+
+        <div class="btn option">
+          <img src="cityIcons/ottawa.png" height="60" width="60">
+          <p>Ottawa</p>
+        </div>
+
+        <div class="btn option">
+          <img src="cityIcons/vancouver.png" height="60" width="60">
+          <p>Vancouver</p>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div> 
+
+
+<!-- Recommanded movies -->
+ 
+    <div class="ScriptTop">
+        <div class="rt-container">
+            <div class="col-rt-4" id="float-right">
+
+            </div>
+        </div>
+    </div>
+
+    <header class="ScriptHeader">
+        <div class="rt-container">
+            <div class="col-rt-12">
+                <div class="rt-heading">
+                    <h2>Recommended Movies</h2>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section>
+        <div class="rt-container">
+            <div class="col-rt-12">
+                <div class='demo-container'>
+                    <div class='carousel'>
+                        <input checked='checked' class='carousel__activator' id='carousel-slide-activator-1'
+                            name='carousel' type='radio'>
+                        <input class='carousel__activator' id='carousel-slide-activator-2' name='carousel' type='radio'>
+                        <input class='carousel__activator' id='carousel-slide-activator-3' name='carousel' type='radio'>
+                        <div class='carousel__controls'>
+                            <label class='carousel__control carousel__control--forward'
+                                for='carousel-slide-activator-2'>
+                                >
+                            </label>
+                        </div>
+                        <div class='carousel__controls'>
+                            <label class='carousel__control carousel__control--backward'
+                                for='carousel-slide-activator-1'>
+                                < </label>
+                                    <label class='carousel__control carousel__control--forward'
+                                        for='carousel-slide-activator-3'>
+                                        >
+                                    </label>
+                        </div>
+                        <div class='carousel__controls'>
+                            <label class='carousel__control carousel__control--backward'
+                                for='carousel-slide-activator-2'>
+                                < </label>
+                        </div>
+                        <div class='carousel__screen'>
+                            <div class='carousel__track'>
+                                <div
+                                    class='carousel__item carousel__item--mobile-in-1 carousel__item--tablet-in-2 carousel__item--desktop-in-5'>
+                                    <div class="carousel_inner">
+	                                    <img class='demo-content' src="img/1.jpg" alt="img1"/>
+	                                    <h5>ALONE</h5>
+	                                    <h6 class="genre">Action/Adventure/Fantasy</h6>
+                               	 	</div>
+                                </div>
+                                <div
+                                    class='carousel__item carousel__item--mobile-in-1 carousel__item--tablet-in-2 carousel__item--desktop-in-5'>
+                                    <div class="carousel_inner">
+	                                    <img class='demo-content' src="img/2.jpg" alt="img2">
+	                                    <h5>BATMAN</h5>
+	                                    <h6>Action/Crime/Drama</h6>
+                                	</div>
+                                </div>
+                                <div
+                                    class='carousel__item carousel__item--mobile-in-1 carousel__item--tablet-in-2 carousel__item--desktop-in-5'>
+                                    <div class="carousel_inner">
+	                                    <img class='demo-content' src="img/3.jpeg" alt="img3">
+	                                    <h5>BLACK WIDOW</h5>
+	                                    <h6>Action/Adventure</h6>
+                                	</div>
+                                </div>
+                                <div
+                                    class='carousel__item carousel__item--mobile-in-1 carousel__item--tablet-in-2 carousel__item--desktop-in-5'>
+                                    <div class="carousel_inner">
+	                                    <img class='demo-content' src="img/4.jpeg" alt="img4">
+	                                    <h5>FREE GUY</h5>
+		                                <h6>Comedy/Action</h6>
+                                	</div>
+                                	</div>
+                                <div
+                                    class='carousel__item carousel__item--mobile-in-1 carousel__item--tablet-in-2 carousel__item--desktop-in-5'>
+                                    <div class="carousel_inner">
+	                                    <img class='demo-content' src="img/5.jpeg" alt="img5">
+	                                    <h5>GREENLAND</h5>
+		                                <h6>Action/Disaster</h6>
+                                	</div>
+                                </div>
+                                <div
+                                    class='carousel__item carousel__item--mobile-in-1 carousel__item--tablet-in-2 carousel__item--desktop-in-5'>
+                                    <div class="carousel_inner">
+                                    <img class='demo-content' src="img/6.jpg" alt="img6">
+                                    <h5>JOHN WICK 4</h5>
+	                                <h6>Action</h6>
+                                	</div>
+                                </div>
+                                <div
+                                    class='carousel__item carousel__item--mobile-in-1 carousel__item--tablet-in-2 carousel__item--desktop-in-5'>
+                                    <div class="carousel_inner">
+                                    <img class='demo-content' src="img/7.jpg" alt="img7">
+                                    <h5>MONSTER HUNTER</h5>
+	                                <h6>Action/Fantasy</h6>
+                                </div>
+                                </div>
+                                <div
+                                    class='carousel__item carousel__item--mobile-in-1 carousel__item--tablet-in-2 carousel__item--desktop-in-5'>
+                                    <div class="carousel_inner">
+                                    <img class='demo-content' src="img/8.jpg" alt="img8">
+                                    <h5>NEWS OF THE WORLD</h5>
+	                                <h6>Action/Adventure/Drama</h6>
+                                </div>
+                                </div>
+                                <div
+                                    class='carousel__item carousel__item--mobile-in-1 carousel__item--tablet-in-2 carousel__item--desktop-in-5'>
+                                    <div class="carousel_inner">
+                                    <img class='demo-content' src="img/9.jpeg" alt="img9">
+                                    <h5>NO TIME TO DIE</h5>
+	                                <h6>Action/Adventure</h6>
+                                </div>
+                                </div>
+                                <div
+                                    class='carousel__item carousel__item--mobile-in-1 carousel__item--tablet-in-2 carousel__item--desktop-in-5'>
+                                    <div class="carousel_inner">
+	                                    <img class='demo-content' src="img/10.png" alt="img10">
+	                                    <h5>WONDER WOMAN 1984</h5>
+	                                    <h6>Action/Adventure/Fantasy</h6>
+                                </div>
+                                </div>
+                                <div
+                                    class='carousel__item carousel__item--mobile-in-1 carousel__item--tablet-in-2 carousel__item--desktop-in-5'>
+                                    <div class="carousel_inner">
+	                                    <img class='demo-content' src="Movies/dreamgirls.jpg" alt="img10">
+	                                    <h5>DREAM GIRLS</h5>
+	                                    <h6>Musical/Drama</h6>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+	<!-- trailer -->
+	<div class="trailer-section" id="trailer">
+		<h2>{{ Title }}</h2>
+		<iframe src="https://www.youtube-nocookie.com/embed/XW2E2Fnh52w" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"  allowfullscreen></iframe>
+	</div>
+
+<!-- Animation -->
+<div class="Animation">
+
+	 <div class="marquee">
+	 	<h3>Premiere</h3>
+        <ul class="marquee-content">
+          <li><img src="black.jpg"></li>
+          <li><img src="Movies/NoTimeToDie.jpeg"></li>
+          <li><img src="assassin.jpg"></li>
+          <li><img src="greenroomjpg.jpg"></li>
+          <li><img src="Movies/FreeGuy.jpeg"></li>
+          <li><img src="Movies/Wonder_Woman_1984.png"></li>
+          <li><img src="batman.jpg"></li>
+          <li><img src="ironman.jpg"></li>
+          <li><img src="Movies/promisingyoungwoman.jpg"></li>
+          <li><img src="insidious.jpg"></li>
+          <li><img src="clean.jpg"></li>
+          <li><img src="batman.jpg"></li>
+        </ul>
+      </div>
+</div>
+
+    <!-- Upcoming Movie -->
+<div class="upcoming-movie">
+ <div class="container">
+  <h2 id="upcoming-movies1">UPCOMING MOVIES</h2>
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+      <li data-target="#myCarousel" data-slide-to="3"></li>
+      <li data-target="#myCarousel" data-slide-to="4"></li>
+      <li data-target="#myCarousel" data-slide-to="5"></li>
+      <li data-target="#myCarousel" data-slide-to="6"></li>
+      <li data-target="#myCarousel" data-slide-to="7"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+
+      <div class="item active">
+        <img src="upcoming_movies/blackwidow.jpg" alt="Los Angeles" style="width:100%;">
+        <div class="carousel-caption">
+          <h3>BLACK WIDOW</h3>
+          <p>Marvels highlight is astonishing</p>
+        </div>
+      </div>
+
+      <div class="item">
+        <img src="upcoming_movies/fastandfurious.jpg" alt="Chicago" style="width:100%;">
+        <div class="carousel-caption">
+          <h3>FAST AND FURIOUS</h3>
+          <p>One more</p>
+        </div>
+      </div>
+    
+      <div class="item">
+        <img src="upcoming_movies/ghostbusters.jpg" alt="New York" style="width:100%;">
+        <div class="carousel-caption">
+          <h3>GHOST BUSTERS</h3>
+          <p>I am waiting for you!</p>
+        </div>
+      </div>
+
+        <div class="item">
+        <img src="upcoming_movies/spiderman3.jpg" alt="Chicago" style="width:100%;">
+        <div class="carousel-caption">
+          <h3>Spiderman 3</h3>
+          <p>Let me show you how the boss does it</p>
+        </div>
+      </div>
+
+        <div class="item">
+        <img src="upcoming_movies/kingsman.jpg" alt="Chicago" style="width:100%;">
+        <div class="carousel-caption">
+          <h3>kingsman</h3>
+          <p>Only one king</p>
+        </div>
+      </div>
+
+       <div class="item">
+        <img src="upcoming_movies/GodzillaVsKong.jpg" alt="Chicago" style="width:100%;">
+        <div class="carousel-caption">
+          <h3>GODZILLA VS KONG</h3>
+          <p>We are still here</p>
+        </div>
+      </div>
+
+       <div class="item">
+        <img src="upcoming_movies/venom2.jpeg" alt="Chicago" style="width:100%;">
+        <div class="carousel-caption">
+          <h3>Venom 2</h3>
+          <p>It is not leaving me</p>
+        </div>
+      </div>
+
+       <div class="item">
+        <img src="upcoming_movies/suicidesquad.jpg" alt="Chicago" style="width:100%;">
+        <div class="carousel-caption">
+          <h3>Suicide Squard 2</h3>
+          <p>Here's come the party</p>
+        </div>
+      </div>
+  
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+
+</div>
+
+ 
+	
+	<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="main.js"></script>
+    <script>
+    	$(document).on('click','#select',function(){
+  			$('#myModal').modal();
+		});
+
+		$(document).on('click','.option',function(){
+			var option_text = $(this).text();
+	  		$('#selected').text(option_text).val(option_text);
+	  		$('#myModal').modal('hide');
+		});
+
+
+	// Animatation
+		const root = document.documentElement;
+		const marqueeElementsDisplayed = getComputedStyle(root).getPropertyValue("--marquee-elements-displayed");
+		const marqueeContent = document.querySelector("ul.marquee-content");
+
+		root.style.setProperty("--marquee-elements", marqueeContent.children.length);
+
+		for(let i=0; i<marqueeElementsDisplayed; i++) {
+  			marqueeContent.appendChild(marqueeContent.children[i].cloneNode(true));
+		}
+
+		function darkMode(){
+			var ele = document.body;
+			ele.classList.toggle("dark-mode");
+		}
+    </script>
+
+</body>
+<!-- Footer -->
+<footer>
+
+    <div class='top-div'>
+        <div class="footer-ele">
+            <ul>
+                <li class="first-element"><b>Movies By Genre</b></li>
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Romance</a></li>
+                <li><a href="#">Comedy</a></li>
+                <li><a href="#">Drama</a></li>
+                <li><a href="#">Sci-fi</a></li>
+                <li><a href="#">Crime</a></li>
+                <li><a href="#">Mystery</a></li>
+                <li><a href="#">Thriller</a></li>
+            </ul>
+            <ul>
+                <li class="first-element"><b>Movies By language</b></li>
+                <li><a href="#">English</a></li>
+                <li><a href="#">French</a></li>
+                <li><a href="#">Hindi</a></li>
+                <li><a href="#">Tamil</a></li>
+                <li><a href="#">Telugu</a></li>
+            </ul>
+            <ul>
+                <li class="first-element"><b>Popular Movies by Language</b></li>
+                <li><a href="#">Popular Hindi Movies</a></li>
+                <li><a href="#">Popular English Movies</a></li>
+                <li><a href="#">Popular Telugu Movies</a></li>
+                <li><a href="#">Popular Tamil Movies</a></li>
+            </ul>
+            <ul>
+                <li class="first-element"><b>Movies review</b></li>
+                <li><a href="#">Trending Articles</a></li>
+                <li><a href="#">IMDB ratings</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="middle-div">
+        <ul class='middle-ele'>
+            <li class="middle"><a href="#">About Us</a></li>
+            <li class="middle"><a href="About_us/about.html">Contact Us</a></li>
+            <li class="middle"><a href="#">Help</a></li>
+        </ul>
+        <div id="bottom-div">
+            <ul class="footer-ul">
+                <a href="#"><li id="fa" class="fa fa-facebook"></li></a>
+                <a href="#"><li id="fa" class="fa fa-instagram"></li></a>
+                <a href="#"><li id="fa" class="fa fa-twitter"></li></a>
+            </ul>
+        </div>
+    </div>
+
+</footer>
+</html>

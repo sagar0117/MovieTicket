@@ -1,0 +1,158 @@
+body{
+	margin: 0px;
+}
+
+.navbar{
+	height: 100px;
+	margin-bottom: 15px;
+	display: block;
+}
+
+.navbar img{
+	height: 60px;
+	width: 60px;
+	float: left;
+	margin-left: 60px;
+	margin-top: 30px;
+}
+
+.navbar h1{
+	margin-left: 20px;
+	margin-top: 40px;
+	float: left;
+	font-size: 30px;
+	font-family: -apple-system;
+}
+
+.navbar input[type=text]{
+	margin-left: 30px;
+	margin-top: 40px;
+	float: left;
+	padding: 6px;
+	width: 550px;
+	font-size: 17px;
+}
+
+.navbar p{
+	margin-right: 50px;
+	margin-top: 45px;
+	font-family: -apple-system;
+	float: right;
+	font-size: 20px;
+}
+
+.navbar button{
+	padding: 5px 22px;
+	margin-top: 38px; 
+	font-size: 20px;
+	color: white;
+	border-radius: 10px;
+	background-color: #FF1919;
+	margin-right: 60px;
+	float: right;
+}
+
+.dark-mode-button{
+	position: fixed;
+}
+
+.dark-mode-button img{
+	height: 20px;
+	width: 20px;
+}
+
+.dark-mode{
+	background-color:black;
+	color: white;
+}
+
+.movie-board{
+	height: 480px;
+	width: 100%;
+	background-color: #003300;
+	display: block;
+}
+
+.movie-board img{
+	padding-top: 30px;
+	height: 360px;
+	width: 241px;
+	margin-left: 50px;
+}
+
+.availability{
+	color: yellow;
+	font-family: -apple-system;
+	padding-left: 130px;
+
+}
+
+.movie-board-child1{
+	background-color: black;
+	height: 465px;
+	width: 22%;
+	float:left;
+/*	display: block;*/
+}
+
+.movie-board-child2{
+	background-color: darkred;
+	height: 465px;
+	width: 50%;
+	float: left;
+}
+
+.movie-board-child2 img{
+	height: 30px;
+	width: 30px;
+	float: left;
+	margin-top: 30px;
+	margin-left: 5px;
+}
+
+.movie-board-child2 p:nth-child(2){
+	font-family: -apple-system;
+	margin-top: 65px;
+	margin-left: 10px;
+	float: left;
+	color: white;
+}
+
+.movie-board-child2 p:nth-child(3){
+	margin-top: 110px;
+	margin-left: 10px;
+	font-size: 1.4em;
+	color: white;
+	font-family: -apple-system;
+}
+
+.movie-type{
+	margin-top: 20px;
+	margin-left: 10px;
+	background-color: white;
+	font-family: -apple-system;
+}
+
+.movie-language{
+	margin-top: 20px;
+	margin-left: 10px;
+	color: white;
+	font-family: -apple-system;
+
+}
+
+.booking-seats{
+	padding: 5px 22px;
+	margin-top: 38px; 
+	font-size: 20px;
+	color: white;
+	border-radius: 10px;
+	background-color: #FF1919;
+	margin-right: 60px;
+}
+
+
+
+
+
+
