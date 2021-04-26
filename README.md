@@ -4,4 +4,5 @@ In this website you can buy the movie ticket online in your area, You can book t
 Languages:- HTML,CSS, Vue.js, PHP.
 Team member :- Deep, Jestin, Vamsi, Sagar
 
-https://user-images.githubusercontent.com/70458425/115473804-5dae2a80-a20a-11eb-9b2f-e39089eee920.gif
+![115473804-5dae2a80-a20a-11eb-9b2f-e39089eee920 1](https://user-images.githubusercontent.com/72161359/116142032-6b026380-a6a7-11eb-8711-216072a65f81.gif)
+
